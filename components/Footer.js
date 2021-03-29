@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.primary.main,
     padding: theme.spacing(6),
-    color: 'white'
+    color: theme.palette.grey[900]
   }
 }));
 
@@ -17,10 +17,10 @@ export default function Footer() {
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" style={{ color: 'black' }} gutterBottom>
           Ayush CH
-      </Typography>
+        </Typography>
         <Typography variant="subtitle1" align="center" component="p">
           Personal Blog with lots of amazing articles.
-      </Typography>
+        </Typography>
         <Copyright />
       </footer>
     </>

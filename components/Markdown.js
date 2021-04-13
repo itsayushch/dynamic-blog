@@ -10,10 +10,10 @@ const styles = (theme) => ({
     marginTop: theme.spacing(1),
   },
   '@global': {
-    'h3 .header-link-class span, h4 .header-link-class span, h5 .header-link-class span': {
+    'h3 .MuiTypography-root span, h4 .MuiTypography-root span, h5 .MuiTypography-root span': {
       visibility: 'hidden'
     },
-    'h3:hover .header-link-class span, h4:hover .header-link-class span, h5:hover .header-link-class span, h3 .header-link-class:focus span, h4 .header-link-class:focus span, h5 .header-link-class:focus span': {
+    'h3:hover .MuiTypography-root span, h4:hover .MuiTypography-root span, h5:hover .MuiTypography-root span, h3 .MuiTypography-root:focus span, h4 .MuiTypography-root:focus span, h5 .MuiTypography-root:focus span': {
       visibility: 'visible'
     }
   }
@@ -25,7 +25,7 @@ const options = {
       component: (({ children, ...props }) => (
         <>
           <br />
-          <Typography variant='h3' className='header-link-class' gutterBottom {...props}>{children} <span><Link href={`#${props.id}`}>#</Link></span></Typography>
+          <Typography variant='h3' gutterBottom {...props}>{children} <span><Link href={`#${props.id}`}>#</Link></span></Typography>
           <Divider />
         </>
       ))
@@ -34,7 +34,7 @@ const options = {
       component: (({ children, ...props }) => (
         <>
           <br />
-          <Typography variant='h4' className='header-link-class' gutterBottom {...props}>{children} <span><Link href={`#${props.id}`}>#</Link></span></Typography>
+          <Typography variant='h4' gutterBottom {...props}>{children} <span><Link href={`#${props.id}`}>#</Link></span></Typography>
           <Divider />
         </>
       ))
@@ -42,7 +42,7 @@ const options = {
     h3: {
       component: (({ children, ...props }) => (
         <>
-          <Typography variant='h5' className='header-link-class' gutterBottom {...props}>{children} <span><Link href={`#${props.id}`}>#</Link></span></Typography>
+          <Typography variant='h5' gutterBottom {...props}>{children} <span><Link href={`#${props.id}`}>#</Link></span></Typography>
           <br />
         </>
       ))
@@ -50,7 +50,7 @@ const options = {
     h4: {
       component: (({ children, ...props }) => (
         <>
-          <Typography variant='subtitle1' className='header-link-class' gutterBottom {...props}>{children} <span><Link href={`#${props.id}`}>#</Link></span></Typography>
+          <Typography variant='subtitle1' gutterBottom {...props}>{children} <span><Link href={`#${props.id}`}>#</Link></span></Typography>
           <Divider />
         </>
       ))

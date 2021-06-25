@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import Container from '@material-ui/core/Container';
 import Markdown from '../../components/Markdown';
 import Layout from '../../components/Layout';
 import { fetchArticle } from '../../lib/blog';
@@ -71,12 +72,7 @@ export default function Main({ data }) {
                 </div>
 
                 <Divider />
-                <Container
-                  maxWidth="md"
-                  style={{
-                    paddingTop: `${theme.spacing(8)}px`,
-                  }}
-                >
+                <Container maxWidth="md">
                     <Markdown className={classes.markdown}>
                         {data.body}
                     </Markdown>

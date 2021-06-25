@@ -13,11 +13,7 @@ import Prism from 'prismjs';
 
 const useStyles = makeStyles((theme) => ({
     markdown: {
-        ...theme.typography.body2,
-        padding: theme.spacing(6, 30, 8),
-        [theme.breakpoints.down('md')]: {
-            padding: theme.spacing(4, 2, 6),
-        },
+        ...theme.typography.body2
     },
     header: {
         padding: theme.spacing(4, 20, 4),

@@ -71,9 +71,16 @@ export default function Main({ data }) {
                 </div>
 
                 <Divider />
-                <Markdown className={classes.markdown}>
-                    {data.body}
-                </Markdown>
+                <Container
+                  maxWidth="md"
+                  style={{
+                    paddingTop: `${theme.spacing(8)}px`,
+                  }}
+                >
+                    <Markdown className={classes.markdown}>
+                        {data.body}
+                    </Markdown>
+                </Container>
             </Grid>
         </Layout>
     );

@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     header: {
         padding: theme.spacing(4, 20, 4),
         [theme.breakpoints.down('md')]: {
-            padding: theme.spacing(4, 2, 6),
-        },
+            padding: theme.spacing(4, 2, 6)
+        }
     }
 }));
 
@@ -40,7 +40,6 @@ export default function Main({ data }) {
                 <meta property="og:description" content={data.description} />
                 <meta property="og:image" content={data.image} />
 
-
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:title" content={data.title} />
                 <meta property="twitter:description" content={data.description} />
@@ -48,19 +47,14 @@ export default function Main({ data }) {
             </Head>
             <Grid item xs={12}>
                 <div className={classes.header}>
-                    <Typography variant="h3" gutterBottom align='center'>
+                    <Typography variant="h3" gutterBottom align="center">
                         {data.title}
                         <Divider />
                     </Typography>
 
-                    <Image
-                        src={data.image}
-                        layout='responsive'
-                        width={556}
-                        height={278}
-                    />
+                    <Image src={data.image} layout="responsive" width={556} height={278} />
                     <br />
-                    <Typography variant="h5" gutterBottom align='center'>
+                    <Typography variant="h6" gutterBottom>
                         <Divider />
                         <br />
                         {data.description}
@@ -69,28 +63,27 @@ export default function Main({ data }) {
 
                 <Divider />
                 <Container maxWidth="md">
-                    <Markdown className={classes.markdown}>
-                        {data.body}
-                    </Markdown>
+                    <article>
+                        <Markdown>{data.body}</Markdown>
+                    </article>
                 </Container>
             </Grid>
         </Layout>
     );
 }
-
+// className={classes.markdown}
 export async function getServerSideProps(router) {
-
     const data = await fetchArticle(router.query);
 
     if (!data) {
         return {
             notFound: true
-        }
+        };
     }
 
     return {
         props: {
             data: JSON.parse(JSON.stringify(data))
         }
-    }
+    };
 }

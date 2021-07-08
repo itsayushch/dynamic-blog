@@ -1,0 +1,7 @@
+.subheading-anchor + section:hover .anchor-icon {
+    opacity: 1;
+}
+
+.anchor-icon {
+    opacity: 0;
+}

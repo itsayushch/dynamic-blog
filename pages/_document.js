@@ -16,6 +16,10 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap"
                         rel="stylesheet"
                     />
+                    <script async defer
+                        src="https://aurora.miubot.ga/public/aurora.js"
+                        aurora-id="cc708c2cc8d8cb5fe15080a157229135" 
+                    />
                 </Head>
                 <body>
                     <Main />

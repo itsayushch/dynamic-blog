@@ -2,11 +2,10 @@ import { allArticles } from '../../lib/blog';
 import Layout from '../../components/Layout';
 import Cards from '../../components/Cards';
 import SubHeader from '../../components/SubHeader';
-import Typography from '@material-ui/core/Typography';
 import { useUser } from '../../lib/hooks';
 
 export default function Dashboard({ data }) {
-  const user = useUser({ redirectTo: '/login' });
+  useUser({ redirectTo: '/login' });
 
   return (
     <Layout>

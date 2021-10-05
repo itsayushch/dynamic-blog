@@ -28,7 +28,7 @@ function Copyright() {
 function Error({ err }) {
     return (
         <Typography variant="body2" color="error" align="center">
-            {err}   
+            {err}
         </Typography>
     );
 }
@@ -105,7 +105,7 @@ export default function SignInSide() {
                     </Typography>
                     <form className={classes.form} onSubmit={handleSubmit}>
                         <TextField
-                            error={errorMsg ? true : false}
+                            error={!!errorMsg}
                             variant="outlined"
                             margin="normal"
                             required
@@ -117,7 +117,7 @@ export default function SignInSide() {
                             autoFocus
                         />
                         <TextField
-                            error={errorMsg ? true : false}
+                            error={!!errorMsg}
                             variant="outlined"
                             margin="normal"
                             required
@@ -129,7 +129,7 @@ export default function SignInSide() {
                             autoComplete="current-password"
                         />
                         <Box mt={5}>
-                            {errorMsg && <Error err={errorMsg}/>} 
+                            {errorMsg && <Error err={errorMsg}/>}
                         </Box>
                         <Button
                             type="submit"

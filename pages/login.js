@@ -107,7 +107,7 @@ export default function SignInSide() {
                     </Typography>
                         <form className={classes.form} onSubmit={handleSubmit}>
                             <TextField
-                                error={errorMsg ? true : false}
+                                error={!!errorMsg}
                                 variant="outlined"
                                 margin="normal"
                                 required
@@ -119,7 +119,7 @@ export default function SignInSide() {
                                 autoFocus
                             />
                             <TextField
-                                error={errorMsg ? true : false}
+                                error={!!errorMsg}
                                 variant="outlined"
                                 margin="normal"
                                 required

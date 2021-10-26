@@ -50,7 +50,7 @@ export default function Cards({ cards, loggedIn } = { cards: [], loggedIn: false
                                     View
                                 </Button>
                                 {loggedIn &&
-                                    <Button size="large" variant="contained" color="primary" onClick={() => Router.push(`/dashboard/edit/${m.slug}`)}>
+                                    <Button size="large" variant="contained" color="primary" style={{ marginLeft: '1em' }} onClick={() => Router.push(`/dashboard/edit/${m.slug}`)}>
                                         Edit
                                     </Button>
                                 }
